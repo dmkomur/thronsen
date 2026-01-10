@@ -72,8 +72,34 @@ body {
         font-family: "Anton", sans-serif;
         font-weight: 700;
         margin-bottom: 48px;
-        transform: rotate(-90%);
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
 }
+
+
+
+.section-divider {
+        position: relative;
+}
+
+.divider {
+        position: absolute;
+        width: 100%;
+        fill: var(--color-dark);
+        bottom: -40px;
+        right: 28px;
+}
+
+.divider-line {
+        position: absolute;
+        bottom: -40px;
+        height: 40px;
+        width: 52vw;
+        left: 48%;
+        background-color: var(--color-dark);
+        z-index: 0;
+}
+
 
 @media (min-width: 768px) {
         .container {
@@ -83,6 +109,10 @@ body {
 
         .section-header {
                 font-size: 56px;
+        }
+
+        .divider {
+                right: 30px;
         }
 }
 
@@ -94,6 +124,10 @@ body {
 
         .section-header {
                 font-size: 56px;
+        }
+
+        .divider {
+                right: 40px;
         }
 }
 
@@ -263,6 +297,10 @@ body {
 
 /* ===== hero section styles =====*/
 
+.hero {
+        position: relative;
+}
+
 .hero-text-wrapper {
         padding: 104px 0 80px 0;
         display: flex;
@@ -388,9 +426,20 @@ body {
 
 .services {
         background-color: var(--color-primary);
+        padding: 64px 0;
 }
 
+@media (min-width: 768px) {
+        .services {
+                padding: 78px 0;
+        }
+}
 
+@media (min-width: 1200px) {
+        .services {
+                padding: 112px 0;
+        }
+}
 
 
 @keyframes slowZoom {
