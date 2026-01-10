@@ -1,0 +1,255 @@
+/* ======= reset styles =======*/
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+
+ul,
+ol {
+        list-style: none;
+}
+
+a {
+        text-decoration: none;
+        color: inherit;
+}
+
+img {
+        max-width: 100%;
+        display: block;
+}
+
+button,
+input,
+textarea,
+select {
+        font: inherit;
+        background: none;
+        border: none;
+        outline: none;
+}
+
+html,
+
+body {
+        font-family: "Antonio", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-weight: 400;
+        background-color: var(--color-dark);
+        color: var(--color-light);
+}
+
+
+/* ==== variable styles ====== */
+
+:root {
+        --bp-mobile: 375px;
+        --bp-tablet: 768px;
+        --bp-desktop: 1200px;
+        --color-dark: #01110A;
+        --color-primary: #003E1F;
+        --color-primary-light: #73BA9B;
+        --color-accent: #BA2D0B;
+        --color-light: #D5F2E3;
+
+}
+
+.container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+        .container {
+                max-width: 768px;
+                padding: 0 24px;
+        }
+}
+
+@media (min-width: 1200px) {
+        .container {
+                max-width: 1200px;
+                padding: 0 32px;
+        }
+}
+
+/* ===== header styles ====== */
+
+.header {
+        padding: 16px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+}
+
+.nav-desk {
+        display: none;
+
+}
+
+.nav-menu-button {
+        fill: var(--color-primary-light);
+}
+
+.nav-menu-close-button {
+
+        fill: var(--color-accent);
+        align-self: flex-end;
+}
+
+.mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background-color: var(--color-primary);
+        box-shadow: -2px 0 12px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 72px;
+
+        transition:
+                right 0.4s ease-in-out,
+                opacity 0.3s ease,
+                transform 0.4s ease;
+
+        opacity: 0;
+        transform: translateX(50px);
+}
+
+.mobile-menu.active {
+        right: 0;
+        opacity: 1;
+        transform: translateX(0);
+}
+
+.nav-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+}
+
+
+.logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: relative;
+}
+
+.logo-img {
+        fill: var(--color-primary-light);
+
+}
+
+.logo-text {
+        font-size: 20px;
+        font-weight: 700;
+        color: #fff;
+        font-family: "Anton", sans-serif;
+}
+
+.nav-item {
+        position: relative;
+        transition: color 0.3s ease;
+        font-size: 18px;
+}
+
+.logo-text::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -4px;
+
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-primary);
+
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: center;
+        transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-text::after,
+.logo:focus .logo-text::after {
+        transform: translateX(-50%) scaleX(1);
+}
+
+.nav-item::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -8px;
+
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-accent);
+
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: center;
+
+        transition: transform 0.3s ease;
+}
+
+.nav-item:hover,
+.nav-item:focus {
+        color: var(--color-accent);
+        transition: color 0.3s ease;
+}
+
+.nav-item:hover::after,
+.nav-item:focus::after {
+        transform: translateX(-50%) scaleX(1);
+}
+
+@media (min-width: 768px) {
+
+
+        .header {
+                padding: 20px 0;
+        }
+
+        .nav-desk {
+                display: flex;
+                gap: 42px;
+                margin-right: 24px;
+        }
+
+        .nav-menu-button {
+                display: none;
+        }
+
+        .nav-menu-close-button {
+                cursor: pointer;
+                transition: all 0.3s ease;
+        }
+
+        .nav-menu-close-button:hover,
+        .nav-menu-close-button:focus {
+                fill: var(--secondary-color);
+                transition: all 0.3s ease;
+        }
+
+
+        .mobile-menu {
+                display: none;
+        }
+
+        .logo-text {
+                font-size: 24px;
+                font-weight: 700;
+                color: #fff;
+                font-family: "Anton", sans-serif;
+        }
+}
