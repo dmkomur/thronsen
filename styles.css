@@ -730,7 +730,7 @@ body {
 }
 
 .footer-text {
-        font-size: 20px;
+        font-size: 16px;
         color: var(--color-primary-light);
         line-height: 1.4;
         background-color: var(--color-primary);
@@ -744,7 +744,7 @@ body {
         }
 
         .footer-text {
-                font-size: 24px;
+                font-size: 18px;
         }
 
         .footer-wrapper {
