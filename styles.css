@@ -517,10 +517,12 @@ body {
         transition: all 0.3s ease;
         color: var(--color-light);
         font-size: 20px;
+
 }
 
 .accordion-header:hover {
-        color: var(--color-primar);
+        color: var(--color-primary-light);
+        transition: all 0.3s ease;
 }
 
 .accordion-content {
