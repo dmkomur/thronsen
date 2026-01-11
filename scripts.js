@@ -1,13 +1,37 @@
 const buttonOpen = document.getElementById("menu-open-button");
 const buttonClose = document.getElementById("menu-close-button");
 const mobileMenu = document.querySelector(".mobile-menu");
+const backdrop = document.getElementById("mobile-backdrop");
 
-buttonOpen.addEventListener("click", () => {
-    mobileMenu.classList.add("active");
+const mobileNavLinks = document.querySelectorAll(".nav-mobile .nav-item");
+
+mobileNavLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        closeMenu();
+    });
 });
 
-buttonClose.addEventListener("click", () => {
+function openMenu() {
+    mobileMenu.classList.add("active");
+    backdrop.classList.add("active");
+    document.body.style.overflow = "hidden";
+}
+
+function closeMenu() {
     mobileMenu.classList.remove("active");
+    backdrop.classList.remove("active");
+    document.body.style.overflow = "";
+}
+
+buttonOpen.addEventListener("click", openMenu);
+buttonClose.addEventListener("click", closeMenu);
+backdrop.addEventListener("click", closeMenu);
+
+// Закрытие по ESC (bonus UX)
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        closeMenu();
+    }
 });
 
 const accordionHeaders = document.querySelectorAll(".accordion-header");
