@@ -43,6 +43,10 @@
         />
         <link rel="stylesheet" href="styles.css" />
         <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
     </head>
 
     <body>
@@ -112,13 +116,29 @@
         <div class="container">
             <section class="hero">
                 <div class="hero-text-wrapper">
-                    <h1 class="hero-title">Kvalitet som varer</h1>
-                    <h2 class="hero-subtitle">
+                    <h1
+                        class="hero-title"
+                        data-aos="fade-up"
+                        data-aos-duration="1600"
+                    >
+                        Kvalitet som varer
+                    </h1>
+                    <h2
+                        class="hero-subtitle"
+                        data-aos="fade-up"
+                        data-aos-duration="2000"
+                        data-aos-delay="300"
+                    >
                         25 års erfaring innen bygg og uteområder
                     </h2>
                 </div>
                 <div class="hero-img">
-                    <a href="#contacts" class="hero-link">
+                    <a
+                        href="#contacts"
+                        class="hero-link"
+                        data-aos="fade-up"
+                        data-aos-duration="3000"
+                    >
                         <span>Kontakt oss</span>
                         <svg class="hero-link-icon">
                             <use href="./assets/set.svg#icon-arrow-right"></use>
@@ -133,13 +153,23 @@
             <div class="services" id="services">
                 <div class="container">
                     <div class="services-header-wrapper">
-                        <h2 class="section-header">Tjenester</h2>
+                        <h2
+                            class="section-header"
+                            data-aos="fade-up-right"
+                            data-aos-duration="1000"
+                        >
+                            Tjenester
+                        </h2>
                         <img
                             src="./assets/worker.jpg"
                             alt="spesialist"
                             class="services-header-img"
                         />
-                        <p class="services-header-text">
+                        <p
+                            class="services-header-text"
+                            data-aos="fade-up"
+                            data-aos-duration="1500"
+                        >
                             Pålitelige løsninger for uterom. Vi jobber med
                             etablering, drift og teknisk tilrettelegging av
                             prosjekter i alle størrelser – fra små gårdsrom til
@@ -251,13 +281,23 @@
 
             <div class="container" id="about">
                 <section class="about-header-wrapper">
-                    <h2 class="section-header">Om oss</h2>
+                    <h2
+                        class="section-header"
+                        data-aos="fade-up-right"
+                        data-aos-duration="1000"
+                    >
+                        Om oss
+                    </h2>
                     <img
                         src="./assets/people.jpg"
                         alt="people"
                         class="about-header-img"
                     />
-                    <p class="about-header-text">
+                    <p
+                        class="about-header-text"
+                        data-aos="fade-up"
+                        data-aos-duration="3000"
+                    >
                         Vår reise begynte for over 25 år siden. I løpet av denne
                         tiden har vi gjennomført flere hundre prosjekter og
                         opparbeidet oss uvurderlig erfaring. Gjennom årene har
@@ -306,8 +346,18 @@
         <footer class="footer" id="contacts">
             <div class="container">
                 <div class="footer-wrapper">
-                    <h2 class="section-header">Kontakt</h2>
-                    <address class="footer-address">
+                    <h2
+                        class="section-header"
+                        data-aos="fade-up-right"
+                        data-aos-duration="1000"
+                    >
+                        Kontakt
+                    </h2>
+                    <address
+                        class="footer-address"
+                        data-aos="fade-up"
+                        data-aos-duration="1500"
+                    >
                         <p>
                             Telefon:
                             <a href="tel:+4712345678">+47 958 13 260</a>
@@ -350,6 +400,12 @@
             </div>
         </footer>
 
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                AOS.init();
+            });
+        </script>
         <script src="scripts.js" defer></script>
     </body>
 </html>
