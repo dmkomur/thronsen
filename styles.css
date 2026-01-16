@@ -282,7 +282,6 @@ body {
         .nav-desk {
                 display: flex;
                 gap: 42px;
-                margin-right: 24px;
         }
 
         .nav-menu-button {
