@@ -23,6 +23,7 @@ a {
 img {
         max-width: 100%;
         display: block;
+        border-radius: 4px;
 }
 
 button,
@@ -357,6 +358,7 @@ body {
         height: 228px;
         overflow: hidden;
         margin-bottom: 48px;
+        border-radius: 4px;
 }
 
 .hero-img::before {
@@ -416,6 +418,7 @@ body {
         height: 32px;
         background-color: var(--color-accent);
         padding: 4px;
+        border-radius: 2px;
 }
 
 @media (min-width: 768px) {
@@ -473,6 +476,10 @@ body {
 
 .services {
         background-color: var(--color-primary);
+        background-image: url("./assets/lgreen.png");
+        background-repeat: no-repeat;
+        background-position: 116%;
+        background-size: contain;
         padding: 84px 0 16px 0;
 }
 
