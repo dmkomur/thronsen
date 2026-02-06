@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="no">
     <head>
         <meta charset="UTF-8" />
@@ -54,9 +54,10 @@
             <header class="header">
                 <a href="index.html" class="logo">
                     <svg width="64" height="64" class="logo-img">
-                        <use xlink:href="./assets/set.svg#icon-leaf"></use>
+                        <use xlink:href="./assets/logo.svg#icon-abt-logo"></use>
                     </svg>
-                    <span class="logo-text"> ABT Anleggsgartner</span>
+                    <span class="inlogo-text">ABT</span>
+                    <span class="logo-text">Anleggsgartner</span>
                 </a>
                 <ul class="nav-desk">
                     <li>
@@ -132,19 +133,18 @@
                         25 års erfaring innen bygg og uteområder
                     </h2>
                 </div>
-                <div class="hero-img">
-                    <a
-                        href="#contacts"
-                        class="hero-link"
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                    >
-                        <span>Kontakt oss</span>
-                        <svg class="hero-link-icon">
-                            <use href="./assets/set.svg#icon-arrow-right"></use>
-                        </svg>
-                    </a>
-                </div>
+                <div class="hero-img"></div>
+                <a
+                    href="#contacts"
+                    class="hero-link"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                >
+                    <span>Kontakt oss</span>
+                    <svg class="hero-link-icon">
+                        <use href="./assets/set.svg#icon-arrow-right"></use>
+                    </svg>
+                </a>
             </section>
         </div>
 
@@ -154,11 +154,18 @@
                 <div class="container">
                     <div class="services-header-wrapper">
                         <h2 class="section-header">Tjenester</h2>
-                        <img
-                            src="./assets/worker.jpg"
-                            alt="spesialist"
-                            class="services-header-img"
-                        />
+                        <picture>
+                            <source
+                                srcset="./assets/nh2x.webp"
+                                media="(min-resolution: 2dppx)"
+                            />
+                            <img
+                                src="./assets/nh1x.webp"
+                                alt="spesialist"
+                                class="services-header-img"
+                            />
+                        </picture>
+
                         <p
                             class="services-header-text"
                             data-aos="fade-up"
@@ -343,6 +350,7 @@
             </div>
         </main>
         <div class="stone-divider"></div>
+        <div class="divid-green"></div>
         <footer class="footer" id="contacts">
             <div class="container">
                 <div class="footer-wrapper">
@@ -354,9 +362,7 @@
                         </p>
                         <p>
                             E-post:
-                            <a href="mailto:post@thronsen.no "
-                                >post@thronsen.no</a
-                            >
+                            <a>post (krølllalfa) thronsen.no</a>
                         </p>
                         <a
                             href="https://www.facebook.com/abt.anleggsgartner"
