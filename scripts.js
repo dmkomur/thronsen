@@ -27,7 +27,6 @@ buttonOpen.addEventListener("click", openMenu);
 buttonClose.addEventListener("click", closeMenu);
 backdrop.addEventListener("click", closeMenu);
 
-// Закрытие по ESC (bonus UX)
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
         closeMenu();
@@ -62,4 +61,32 @@ accordionHeaders.forEach((header) => {
             arrow.classList.add("open");
         }
     });
+});
+
+// mail insert
+
+document.addEventListener("DOMContentLoaded", () => {
+    const link = document.getElementById("email");
+    if (!link) return;
+
+    const revealEmail = () => {
+        const email = "post" + "@" + "thronsen.no";
+        link.href = `mailto:${email}`;
+        link.textContent = email;
+    };
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            if (entries[0].isIntersecting) {
+                revealEmail();
+                observer.disconnect();
+            }
+        },
+        {
+            rootMargin: "300px 0px",
+            threshold: 0,
+        },
+    );
+
+    observer.observe(link);
 });

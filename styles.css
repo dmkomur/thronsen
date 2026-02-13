@@ -476,10 +476,10 @@ body {
 
 .services {
         background-color: var(--color-primary);
-        background-image: url("./assets/lgreen.png");
+        /* background-image: url("./assets/lgreen.png");
         background-repeat: no-repeat;
         background-position: 116%;
-        background-size: contain;
+        background-size: contain; */
         padding: 84px 0 16px 0;
 }
 
