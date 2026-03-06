@@ -374,7 +374,7 @@ body {
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
         .hero-img::before {
-                background-image: url(. /assets/trap2x.webp);
+                background-image: url(./assets/trap2x.webp);
         }
 }
 
