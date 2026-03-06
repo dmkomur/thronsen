@@ -374,7 +374,7 @@ body {
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
         .hero-img::before {
-                background-image: url(./assets/trap2x.webp);
+                background-image: url(. /assets/trap2x.webp);
         }
 }
 
@@ -829,4 +829,135 @@ body {
         100% {
                 transform: scale(1) translateY(0);
         }
+}
+
+/* Бекдроп модалки */
+
+
+
+.modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+}
+
+/* Контент модалки */
+.modal-content {
+        background: var(--color-light);
+        width: 80%;
+        max-width: 600px;
+        padding: 72px 16px 24px 16px;
+        border-radius: 8px;
+        position: relative;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        animation: fadeIn 0.3s ease;
+
+}
+
+#closeModal {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+
+}
+
+@keyframes fadeIn {
+        from {
+                opacity: 0;
+                transform: translateY(-20px);
+        }
+
+        to {
+                opacity: 1;
+                transform: translateY(0);
+        }
+}
+
+
+
+input,
+textarea {
+        width: 100%;
+        padding: 8px;
+        margin: 8px 0 16px;
+        border: 2px solid var(--color-dark);
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+        resize: none;
+        transition: border 0.2s;
+}
+
+.invalid {
+        border-color: var(--color-accent);
+}
+
+.valid {
+        border-color: var(--color-primary-light);
+}
+
+#submitBtn {
+        background-color: var(--color-primary);
+        color: var(--color-light);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        margin: 0 auto;
+        display: block;
+}
+
+#submitBtn:hover {
+        background-color: var(--color-dark);
+        transition: background-color 0.3s ease;
+}
+
+#sentMessage {
+        font-weight: bold;
+        color: var(--color-primary);
+        font-size: 16px;
+        margin-left: 10px;
+        margin: 0 auto;
+        display: block;
+}
+
+.honeypot {
+        position: absolute;
+        left: -9999px;
+}
+
+.messageBtn {
+        background-color: var(--color-accent);
+        color: var(--color-light);
+        border: none;
+        padding: 12px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        display: block;
+        margin: 0 auto;
+}
+
+.messageBtn:hover {
+        background-color: var(--color-dark);
+        transition: background-color 0.3s ease;
+}
+
+.messageBtnFooter {
+        margin: 0;
+}
+
+.messageBtnFooter:hover {
+        background-color: var(--color-primary);
+        transition: background-color 0.3s ease;
 }

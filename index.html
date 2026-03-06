@@ -275,6 +275,9 @@
                             </div>
                         </li>
                     </ul>
+                    <button id="openModal" class="messageBtn">
+                        Har du et spørsmål? Send oss ​​en melding
+                    </button>
                 </div>
             </div>
 
@@ -415,6 +418,12 @@
                                 1365 Blommenholm
                             </a>
                         </p>
+                        <button
+                            id="openModalFooter"
+                            class="messageBtn messageBtnFooter"
+                        >
+                            Send oss ​​en melding
+                        </button>
                     </address>
                 </div>
                 <p class="footer-text">
@@ -422,6 +431,57 @@
                 </p>
             </div>
         </footer>
+
+        <!-- Модальное окно -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <svg
+                    width="40"
+                    height="40"
+                    class="nav-menu-close-button"
+                    id="closeModal"
+                >
+                    <use xlink:href="./assets/set.svg#icon-cross"></use>
+                </svg>
+                <form id="contactForm">
+                    <label for="name">Navn</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="your-name"
+                        placeholder="Skriv ditt navn"
+                        required
+                    />
+
+                    <label for="email">E-post</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="your-email"
+                        placeholder="Skriv din e-post"
+                        required
+                    />
+                    <input
+                        type="text"
+                        name="company"
+                        class="honeypot"
+                        autocomplete="off"
+                    />
+
+                    <label for="message">Melding</label>
+                    <textarea
+                        id="message"
+                        name="your-message"
+                        placeholder="Skriv din melding"
+                        required
+                        rows="6"
+                    ></textarea>
+
+                    <button type="submit" id="submitBtn">Send</button>
+                    <span id="sentMessage" style="display: none">✔ Sendt!</span>
+                </form>
+            </div>
+        </div>
 
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
